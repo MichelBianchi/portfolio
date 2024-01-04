@@ -1,0 +1,188 @@
+/* Feito por Michel Bianchi, Design de Comunicação,2023 */
+@charset "UTF-8"
+
+
+/* com o seletor universal, vou tirar todas as configurações padrão que o navegador utiliza. Assim, posso costumizar minha página sem problemas */
+* {
+  font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+  font-size: 16px;
+}
+
+body {
+  background-color: antiquewhite;
+}
+
+/* Como título principal, utilizei da regra "em" para configurar o tamanho do título baseado nos 16px que utilizei como padrão do site, sendo assim o meu h1 teria portanto 32px */
+h1 {
+  font-size: 2em;
+  text-transform: capitalize;
+  color: rgb(44, 87, 1);
+  text-align: center;
+  /* apesar de ficar meio bizarro, vou utilizar a sombra no texto para testar */
+  text-shadow: 1px 1px 1px rgb(3, 205, 33), 2px 2px 1px rgb(3, 205, 33);
+}
+
+/* Utilizei a mesma lógica do h1 no h2 e no h3 */
+h2 {
+  font-size: 1.6em;
+
+  color: rgb(44, 87, 1);
+}
+
+h3 {
+  font-size: 1.3em;
+  text-transform: capitalize;
+  color: rgb(44, 87, 1);
+}
+
+p {
+  color: rgb(33, 63, 0);
+  text-align: left;
+  line-height: 1;
+}
+
+header {
+  background-color: rgb(187, 231, 166);
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.logo {
+  text-align: center;
+}
+
+/* aqui vou começar a configurar o menu para se parecer com uma barra de menu e não como uma lista*/
+.menu {
+  text-align: center;
+  padding: 0%;
+  background-color: rgb(201, 225, 198);
+}
+
+/* nesta secção estou eliminando as balas do menu e colocando os tópicos lado a lado */
+.menu li {
+  list-style: none;
+  display: inline-block;
+}
+
+/* já aqui estou usando um bocadinho de flexbox para deixar os "botões" do meu menu espaçados. Detalhe: nesta altura não conheço nada de flexbox, estou utilizando alguns conhecimentos que adquiri no youtube :)*/
+.menu a {
+  background-color: rgb(201, 225, 198);
+  text-decoration: none;
+  display: flex;
+  padding: 15px;
+  /* coloquei esta borda para o elemento "pular" quando eu tiro o hover do botão*/
+  border-bottom: 4px solid transparent;
+}
+
+.menu a:link {
+  color: rgb(44, 87, 1);
+}
+
+/* aqui estou criando uma animação para quando passarmos o rato pelas palavras do link, mude a cor das mesmas */
+.menu a:hover {
+  background-color: rgb(3, 141, 3);
+  color: rgb(211, 211, 211);
+  border-bottom: 4px solid rgb(44, 87, 1);
+}
+
+.menu a:visited {
+  color: rgb(44, 87, 1);
+}
+
+.menu a:visited:hover {
+  color: rgb(211, 211, 211);
+}
+
+/* aqui tive um pouco de dificuldade em alinhar somente este paragrafo sem ser dentro do próprio HTML. Sendo assim, vi no w3.org que utilizar um "class" pode ajudar a modificar apenas aquela tag no css. Não sei se é o melhor uso mas deu certo */
+p.desctitulo {
+  text-align: center;
+}
+
+/* estou estilizando a seção Sobre */
+article.sobre {
+  background-color: rgb(254, 248, 241);
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+/* Aqui eu deixei uma margem de 30px do conteúdo em relação ao background da seção  */
+article.sobre h2,
+p {
+  padding-top: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+article.sobre figure.videosobre {
+  margin-top: 40px;
+  /* usei o text-align, acho que não é a melhor opção. Tentei usar allign-item mas não resultou */
+  text-align: center;
+}
+
+article.sobre figure.videosobre figcaption {
+  margin-top: 20px;
+}
+
+/* Vou mexer na seção Filmes */
+
+article.filmes {
+  background-color: rgb(254, 248, 241);
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+article.filmes h2 {
+  padding-top: 30px;
+  margin-left: 30px;
+}
+
+article.filmes section.shrek,
+section.shrek2,
+section.shrek3 {
+  padding-top: 30px;
+  margin-right: 30px;
+}
+
+article.filmes section.shrek figure {
+  text-align: center;
+}
+
+article.filmes section.shrek {
+  text-align: center;
+  padding: 30px;
+}
+
+/* A mexer no shrek2 */
+article.filmes section.shrek2 {
+  text-align: center;
+  padding: 30px;
+}
+
+article.filmes section.shrek2 figure {
+  padding-top: 20px;
+}
+
+article.filmes section.shrek2 figcaption {
+  margin-top: 20px;
+}
+
+article.filmes section.shrek3 {
+  text-align: center;
+  padding: 30px;
+}
+
+article.filmes section.shrek3 figcaption {
+  margin-bottom: 20px;
+}
+
+article.personagens {
+  background-color: rgb(254, 248, 241);
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+aside {
+  background-color: rgb(254, 248, 241);
+  margin-left: 100px;
+  margin-right: 100px;
+}

@@ -1,0 +1,466 @@
+/* Feito por Michel Bianchi, Design de Comunicação,2023 */
+@charset "UTF-8";
+
+/* com o seletor universal, vou tirar todas as configurações padrão que o navegador utiliza. Assim, posso costumizar minha página sem problemas */
+
+* {
+  font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+  font-size: 16px;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  cursor: wait;
+}
+
+/* utilizei o site https://alvarotrigo.com/blog/animated-backgrounds-css/ com oreferencia para o body */
+body {
+  background-image: url("https://wallpapers.com/images/hd/shrek-panoramic-view-bm5go6lvxjwxt31k.jpg");
+  background-size: cover;
+  -webkit-animation: slidein 100s;
+  animation: slidein 100s;
+
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+
+  -webkit-animation-direction: normal;
+  animation-direction: alternate;
+}
+
+@-webkit-keyframes slidein {
+  from {
+    background-position: top;
+    background-size: 3000px;
+  }
+  to {
+    background-position: -100px 0px;
+    background-size: 2750px;
+  }
+}
+
+@keyframes slidein {
+  from {
+    background-position: top;
+    background-size: 3000px;
+  }
+  to {
+    background-position: -100px 0px;
+    background-size: 2750px;
+  }
+}
+/* aqui estou estilizando a scrollbar */
+::-webkit-scrollbar {
+  background-color: #aafab6;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #01931f;
+}
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(75, 75, 250, 0.3);
+  border-radius: 3px;
+}
+.center h1 {
+  text-align: center;
+  color: white;
+  font-family: "Source Code Pro", monospace;
+  text-transform: uppercase;
+}
+
+/* Como título principal, utilizei da regra "em" para configurar o tamanho do título baseado nos 16px que utilizei como padrão do site, sendo assim o meu h1 teria portanto 32px */
+h1 {
+  font-size: 2em;
+  text-transform: capitalize;
+  color: rgb(44, 87, 1);
+  text-align: center;
+  /* apesar de ficar meio bizarro, vou utilizar a sombra no texto para testar */
+  text-shadow: 1px 1px 1px rgb(3, 205, 33), 2px 2px 1px rgb(3, 205, 33);
+}
+
+/* fiz um h2 animado. utilizei o site https://alvarotrigo.com/blog/css-text-animations/ como referencia */
+h2 {
+  background-image: linear-gradient(
+    -225deg,
+    #01931f 0%,
+    #3cf160 29%,
+    #01931f 67%,
+    #3cf160 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+  font-size: 1.6em;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+h3 {
+  font-size: 1.3em;
+  text-transform: capitalize;
+  color: rgb(44, 87, 1);
+}
+p {
+  color: rgb(33, 63, 0);
+  text-align: left;
+  line-height: 1.6em;
+}
+
+header {
+  background-color: rgb(187, 231, 166);
+  position: sticky;
+  top: 0px;
+  margin: 0px 0px 30px 0px;
+}
+
+header figure {
+  position: absolute;
+  top: 10px;
+  left: 30px;
+}
+
+/* aqui vou começar a configurar o menu para se parecer com uma barra de menu e não como uma lista*/
+.menu {
+  /* fiz sticky pois no fixed ele está desconfigurando a minha lista */
+  position: sticky;
+  text-align: center;
+  padding: 0%;
+  background-color: rgb(201, 225, 198);
+}
+
+/* tirei o margin e o padding pois estava a dar espaço entre o nav e o body  */
+.menu ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* nesta secção estou eliminando as balas do menu e colocando os tópicos lado a lado */
+.menu li {
+  list-style: none;
+  display: inline-block;
+}
+.menu a {
+  background-color: rgb(201, 225, 198);
+  text-decoration: none;
+  display: flex;
+  padding: 15px;
+  /* coloquei esta borda para o elemento "pular" quando eu tiro o hover do botão*/
+  border-bottom: 4px solid transparent;
+}
+
+.menu a:link {
+  color: rgb(44, 87, 1);
+}
+
+/* aqui estou criando uma animação para quando passarmos o rato pelas palavras do link, mude a cor das mesmas */
+.menu a:hover {
+  background-color: rgb(3, 141, 3);
+  color: rgb(211, 211, 211);
+  border-bottom: 4px solid rgb(44, 87, 1);
+}
+
+.menu a:visited {
+  color: rgb(44, 87, 1);
+}
+
+.menu a:visited:hover {
+  color: rgb(211, 211, 211);
+}
+
+/* estou estilizando a seção Sobre */
+
+.sobre {
+  position: static;
+  display: block;
+  background-color: rgb(231, 246, 228);
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 30px;
+  border-radius: 30px 30px 00px 0;
+}
+
+/* Aqui eu deixei uma margem de 30px do conteúdo em relação ao background da seção  */
+.sobre h2 {
+  padding-top: 30px;
+  /* aqui consigo fazer a margin tanto para esquerda quanto para direita com Shorthand */
+  margin: 30px;
+}
+
+.sobre p {
+  padding: 0px 30px 30px 30px;
+}
+
+article.sobre figure.videosobre {
+  margin-top: 40px;
+  /* usei o text-align, acho que não é a melhor opção. Tentei usar allign-item mas não resultou */
+  text-align: center;
+}
+
+article.sobre figure.videosobre figcaption {
+  position: absolute;
+  display: block;
+  bottom: 350px;
+  right: 610px;
+  margin-top: 20px;
+}
+
+/* Vou mexer na seção Filmes */
+
+article.filmes {
+  background-color: rgb(231, 246, 228);
+  margin-bottom: 30px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+article.filmes h2 {
+  padding-top: 30px;
+  padding-left: 30px;
+}
+
+article.filmes section.shrek,
+section.shrek2,
+section.shrek3 {
+  padding-top: 30px;
+  margin-right: 30px;
+}
+
+section.shrek figure {
+  position: static;
+}
+
+article.filmes section.shrek {
+  text-align: center;
+  padding: 30px;
+}
+
+.botao1 {
+  background-color: rgb(100, 237, 114);
+  padding: 10px;
+  border: 0;
+}
+
+.botao1 a:link {
+  color: rgb(32, 111, 40);
+  text-decoration: none;
+}
+
+/* aqui estou criando uma animação para quando passarmos o rato pelas palavras do link, mude a cor das mesmas */
+.botao1 a:hover {
+  color: rgb(255, 255, 255);
+}
+
+.botao1 a:visited {
+  color: rgb(32, 111, 40);
+}
+
+.botao1 a:visited:hover {
+  color: rgb(255, 255, 255);
+}
+
+/* A mexer no shrek2 */
+article.filmes section.shrek2 {
+  text-align: center;
+  padding: 30px;
+}
+
+article.filmes section.shrek2 figure {
+  padding-top: 20px;
+}
+
+article.filmes section.shrek2 figcaption {
+  margin-top: 20px;
+}
+
+.botao2 {
+  background-color: rgb(100, 237, 114);
+  padding: 10px;
+  border: 0;
+}
+
+.botao2 a:link {
+  color: rgb(32, 111, 40);
+  text-decoration: none;
+}
+.botao2 a:hover {
+  color: rgb(255, 255, 255);
+}
+
+.botao2 a:visited {
+  color: rgb(32, 111, 40);
+}
+
+.botao2 a:visited:hover {
+  color: rgb(255, 255, 255);
+}
+
+.shrek3 {
+  padding: 30px;
+}
+
+.shrek3 figure {
+  padding-left: 450px;
+}
+.shrek3 figcaption {
+  margin-left: 35px;
+}
+
+audio {
+  margin: 20px;
+}
+audio::-webkit-media-controls-panel {
+  background-color: rgb(100, 237, 114);
+}
+audio::-webkit-media-controls-play-button {
+  background-color: rgb(48, 160, 59);
+  border-radius: 50%;
+}
+audio::-webkit-media-controls-current-time-display {
+  color: #333;
+  padding-left: 10px;
+}
+audio::-webkit-media-controls-time-remaining-display {
+  color: #333;
+  padding-right: 10px;
+}
+audio::-webkit-media-controls-timeline {
+  border-radius: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: rgb(48, 160, 59);
+}
+audio::-webkit-media-controls-volume-slider {
+  background-color: rgb(190, 246, 195);
+  border-radius: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+audio::-webkit-media-controls-mute-button {
+  background-color: rgb(48, 160, 59);
+  border-radius: 50%;
+}
+
+.botao3 {
+  background-color: rgb(100, 237, 114);
+  padding: 10px;
+  margin-top: 10px;
+  margin-left: 550px;
+  border: 0;
+}
+
+.botao3 a:link {
+  color: rgb(32, 111, 40);
+  text-decoration: none;
+}
+.botao3 a:hover {
+  color: rgb(255, 255, 255);
+}
+
+.botao3 a:visited {
+  color: rgb(32, 111, 40);
+}
+
+.botao3 a:visited:hover {
+  color: rgb(255, 255, 255);
+}
+.personagens {
+  background-color: rgb(231, 246, 228);
+  margin-bottom: 30px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.personagens h2 {
+  padding-top: 30px;
+  padding-left: 30px;
+}
+.personagens dl {
+  padding-top: 10px;
+  padding-left: 30px;
+  padding-bottom: 30px;
+}
+
+aside {
+  position: relative;
+  display: block;
+  background-color: rgb(231, 246, 228);
+  margin-bottom: 30px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+aside h2 {
+  padding-top: 30px;
+  padding-left: 30px;
+}
+
+aside ul {
+  margin-left: 50px;
+  list-style: none;
+  padding-bottom: 30px;
+}
+
+/* utilizei o site https://css-tricks.com/css-link-hover-effects/ como referencia */
+aside ul a {
+  color: inherit;
+  text-decoration: none;
+}
+
+aside ul a {
+  background: linear-gradient(
+      to right,
+      rgba(32, 200, 40, 1),
+      rgba(32, 200, 40, 1)
+    ),
+    linear-gradient(
+      to right,
+      rgba(255, 0, 0, 1),
+      rgba(255, 0, 180, 1),
+      rgba(0, 100, 200, 1)
+    );
+  background-size: 100% 3px, 0 3px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+}
+
+aside ul a:hover {
+  background-size: 0 3px, 100% 3px;
+}
+
+.rodape {
+  position: relative;
+  display: block;
+  background-color: rgb(201, 225, 198);
+}
+
+.rodape figure {
+  margin-left: 200px;
+}
+.rodape p {
+  margin-left: 300px;
+  padding-bottom: -20px;
+}
