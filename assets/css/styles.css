@@ -60,17 +60,17 @@ body {
     position: absolute;
     width: 350px;
     top: 21%;
-    left: 5%;
+    left: 9%;
+    padding-right: 5%;
   }
 
   .maintence h1 {
     position: absolute;
     color: var(--text-color);
-    font-size: 1.8em;
+    font-size: 1.4em;
     font-family: "Vinila";
     top: 60%;
-    left: 12%;
-    width: 100%;
+    left: 20%;
   }
 
   .maintence p {
@@ -133,19 +133,19 @@ body {
     position: absolute;
     width: 550px;
     top: 12%;
-    left: 30%;
+    right: 32%;
   }
 
   .maintence h1 {
     position: absolute;
     top: 63%;
-    left: 25%;
+    right: 22%;
   }
 
   .maintence p {
     position: absolute;
     font-size: 2.2em;
     top: 75%;
-    left: 38%;
+    right: 38%;
   }
 }
