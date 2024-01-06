@@ -85,22 +85,22 @@ body {
 
 @media screen and (min-width: 1020px) {
   h1 {
-    font-family: "Vinila Bold";
+    font-family: "Vinila";
     font-size: 4.5em;
     color: var(--text-color);
   }
   h2 {
-    font-family: "Vinila Bold";
+    font-family: "Vinila";
     font-size: 3em;
     color: var(--text-color);
   }
   h3 {
-    font-family: "Vinila Bold";
+    font-family: "Vinila";
     font-size: 2.25em;
     color: var(--text-color);
   }
   h4 {
-    font-family: "Vinila Bold";
+    font-family: "Vinila";
     font-size: 1.5em;
     color: var(--text-color);
   }
