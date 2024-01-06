@@ -24,139 +24,128 @@
 @font-face {
   font-family: "Vinila Bold";
   src: url(/assets/media/font/Vinila_Bold.otf) format("opentype");
-  font-weight: 900;
-  color: var(--text-color);
 }
 
 @font-face {
   font-family: "Inter", Arial, Helvetica, sans-serif;
   src: url("https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap");
-  color: var(--text-color);
 }
 
 html,
 body {
+  position: flex;
+  justify-content: center;
+  flex-direction: column;
   width: 100%;
   height: 100%;
   font-size: 16px;
+  background-color: var(--background-color);
 }
 
-@media screen (min-width: 1020px) and {
+/* Versão telemóvel */
+@media screen and (min-width: 320px) and (max-width: 430px) {
+  .menu,
+  main,
+  footer {
+    display: none;
+  }
+
+  .maintence {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  .maintence img {
+    position: absolute;
+    width: 350px;
+    top: 21%;
+    left: 5%;
+  }
+
+  .maintence h1 {
+    position: absolute;
+    color: var(--text-color);
+    font-size: 1.8em;
+    font-family: "Vinila";
+    top: 60%;
+    left: 12%;
+    width: 100%;
+  }
+
+  .maintence p {
+    position: absolute;
+    color: var(--text-color);
+    font-size: 1em;
+    font-family: "Inter";
+    top: 67%;
+    left: 30%;
+  }
+}
+
+@media screen and (min-width: 1020px) {
   h1 {
     font-family: "Vinila Bold";
     font-size: 4.5em;
+    color: var(--text-color);
   }
   h2 {
     font-family: "Vinila Bold";
     font-size: 3em;
+    color: var(--text-color);
   }
   h3 {
     font-family: "Vinila Bold";
     font-size: 2.25em;
+    color: var(--text-color);
   }
   h4 {
     font-family: "Vinila Bold";
     font-size: 1.5em;
+    color: var(--text-color);
   }
-}
-
-/* Versão telemóvel */
-@media screen (max-width: 430px) {
-  body {
-    background-color: var(--background-color);
-  }
-  /* Textos */
-  h1 {
-    font-family: "Vinila Bold";
-    font-size: 36px;
-  }
-
-  h2 {
-    font-family: "Vinila Bold";
-    font-size: 24px;
-  }
-
-  h3 {
-    font-family: "Vinila Bold";
-    font-size: 16px;
-  }
-
-  h4 {
-    font-family: "Vinila Bold";
-    font-size: 14px;
-  }
-
   p {
     font-family: "Inter";
-    font-size: 1em;
+    font-size: 16px;
+    color: var(--text-color);
   }
 
-  html,
-  body {
-    width: 100%;
-    height: 100%;
-  }
-
-  /* Nav e menu */
-  header {
-    display: flex;
-    flex-wrap: wrap;
-    flex-grow: 1;
-    justify-content: space-between;
-
-    background-color: var(--lighter-color);
-  }
-
-  header h2 {
-    color: var(--main-color);
-    padding: 10px 0 10px 10px;
-  }
-
-  header nav ul {
-    display: none;
-  }
-
-  /* Landingpage mobile */
-  .landingpage {
-    display: block;
+  .menu {
     position: relative;
-    height: 66.4vh;
+    display: block;
     width: 100%;
+    height: auto;
     background-color: brown;
   }
-
-  .landingpage h1 {
-    display: block;
-    position: absolute;
-    width: 80%;
-    margin-top: 50%;
-  }
-
-  .landingpage figure > img:nth-child(1) {
-    position: absolute;
-    display: block;
-    margin-top: 13vh;
-  }
-
-  .landingpage figure > img:nth-child(2) {
-    position: absolute;
-    display: block;
-    margin-top: 50vh;
-    margin-left: 35vw;
-  }
-
-  .landingpage > figure:nth-child(4) {
-    display: block;
-    position: absolute;
-    margin-top: 21vh;
-    margin-left: vw;
-  }
-
-  .landingpage > figure:nth-child(5) {
+  .menu,
+  main,
+  footer {
     display: none;
   }
 
-  .landingpage > figure:nth-child(6) {
-    display: none;
+  .maintence {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  .maintence img {
+    position: absolute;
+    width: 550px;
+    top: 12%;
+    left: 30%;
+  }
+
+  .maintence h1 {
+    position: absolute;
+    top: 63%;
+    left: 25%;
+  }
+
+  .maintence p {
+    position: absolute;
+    font-size: 2.2em;
+    top: 75%;
+    left: 38%;
   }
 }
