@@ -22,14 +22,16 @@
 
 /* Fontes utilizadas */
 @font-face {
-  font-family: "Vinila Bold", Impact, Haettenschweiler, "Arial Narrow Bold",
-    sans-serif;
-  src: url(/assets/media/font/Vinila_Bold.otf) format("opentype");
+  font-family: "Bricolage Grotesque", "Trebuchet MS", Helvetica, sans-serif;
+  src: local(Bricolage Grotesque)
+    url(https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700&display=swap)
+    format("opentype");
 }
 
 @font-face {
-  font-family: "Inter", "Roboto", Arial, Helvetica, sans-serif;
-  src: url("https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap");
+  font-family: "Inter Tight", "Roboto", Arial, Helvetica, sans-serif;
+  src: local(Inter Tight)
+    url("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700&display=swap");
 }
 
 html,
@@ -85,28 +87,28 @@ body {
 
 @media screen and (min-width: 1020px) {
   h1 {
-    font-family: "Vinila";
-    font-size: 4.5em;
+    font-family: "Bricolage Grotesque";
+    font-size: 4em;
     color: var(--text-color);
   }
   h2 {
-    font-family: "Vinila";
+    font-family: "Bricolage Grotesque";
     font-size: 3em;
     color: var(--text-color);
   }
   h3 {
-    font-family: "Vinila";
+    font-family: "Bricolage Grotesque";
     font-size: 2em;
     color: var(--text-color);
   }
   h4 {
-    font-family: "Vinila";
+    font-family: "Bricolage Grotesque";
     font-size: 1.5em;
     color: var(--text-color);
   }
   p {
-    font-family: "Inter";
-    font-size: 16px;
+    font-family: "Inter Tight";
+    font-size: 1em;
     color: var(--text-color);
   }
 
@@ -125,10 +127,8 @@ body {
   .menu ul {
     display: flex;
     padding: 20px 0 20px 60px;
-    /* deixei todos colados à direita */
-    justify-content: flex-end;
-    /* aqui é para centralizar todos na horizontal */
-    align-items: center;
+    justify-content: flex-end; /* deixei todos colados à direita */
+    align-items: center; /* aqui é para centralizar todos na horizontal */
   }
 
   /* espaçamento entre os itens da direita */
@@ -142,15 +142,13 @@ body {
 
   .menu ul li a h3:hover {
     text-decoration: none;
-    /* coloquei um efeito de transição para o hover */
-    transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out; /* coloquei um efeito de transição para o hover */
     color: var(--main-color);
   }
 
   .menu ul li:first-child {
     margin-right: auto;
-    /* faz com que somente o h3 fique para a esquerda */
-    margin-left: 2rem;
+    margin-left: 2rem; /* faz com que somente o h3 fique para a esquerda */
     background-color: #32f6f4;
     background-image: var(--gradient-color);
     background-size: 100%;
@@ -181,7 +179,7 @@ body {
     margin-left: 0;
   }
 
-  /* Tinha criado um elementro grafico no Figma para fazer este efeito de sublinhado, mas como gostava de colocar um efeito de gradient animado como fiz no meu exercício 4, teria que fazer com código. Então usei o mesmo tutorial do exercício 4 mas agora sem o hover */
+  /* Tinha criado um elementro grafico no Figma para fazer este efeito de sublinhado, mas como gostava de colocar um efeito de gradient animado como fiz no meu exercício 4, e para isto ocorrer, teria que fazer com código. Então usei o mesmo tutorial do exercício 4 mas agora sem o hover */
   /* Fonte: https://www.youtube.com/watch?v=zl0Z8CYQoIc&ab_channel=MarioSouto-DevSoutinho */
   .textgradient {
     border-radius: 10px;
@@ -199,7 +197,7 @@ body {
 
   /* Usei o nth-of-type para selecionar um figure específico dentro da meu section .hero */
   /* Fonte: https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-of-type */
-  /* Ilustração */
+  /* Posicionamento da ilustração */
   .hero > figure:nth-of-type(3) {
     position: absolute;
     top: 0;
@@ -231,11 +229,11 @@ body {
   }
 
   /* Display on/off do site em manutenção */
-  /* .maintence {
-    display: none;
-  } */
+  .maintence {
+      display: none;
+    }
 
-  .menu,
+  /* .menu,
   main,
   footer {
     display: none;
@@ -256,14 +254,14 @@ body {
 
   .maintence h1 {
     position: absolute;
-    top: 63%;
+    top: 68%;
     right: 22%;
   }
 
   .maintence p {
     position: absolute;
     font-size: 2.2em;
-    top: 75%;
+    top: 80%;
     right: 38%;
-  }
+  } */
 }
