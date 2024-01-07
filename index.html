@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="icon" href="./assets/media/icons/favicon-chel.svg" />
+    <!-- Tentar fazer o pré carregamento da fonte, para conseguir ser lida pelo navegador mais rapido -->
+    <!-- fonte: https://css-tricks.com/how-to-load-fonts-in-a-way-that-fights-fout-and-makes-lighthouse-happy/ -->
     <meta name="author" content="Michel Bianchi" />
     <meta name="keywords" content="Portfolio, Web Design, FBAUP, Pedro Amado" />
     <meta
@@ -27,9 +29,9 @@
     </div>
 
     <header class="menu">
-      <h2>chelbianchi</h2>
       <nav>
         <ul>
+          <li><h2>chelbianchi</h2></li>
           <li>
             <a href=""><h3>contexto</h3></a>
           </li>
@@ -51,10 +53,14 @@
 
     <main>
       <!-- Pagina Home -->
-      <section class="landingpage">
-        <h1>Michel Bianchi workspace</h1>
+      <section class="hero">
+        <h1>
+          Michel Bianchi
+          <span class="textgradient"
+            >workspace<span class="colourdot">.</span></span
+          >
+        </h1>
         <!-- Este h1 ficou de fora pois vou estilizar o ponto final -->
-        <h1>.</h1>
 
         <!-- Só aparece na versão mobile -->
         <figure>
@@ -69,20 +75,12 @@
           />
         </figure>
 
-        <!-- Barra de decoração -->
-        <figure>
-          <img
-            src="./assets/media/image/decoration-bar.svg"
-            alt="Barra de decoração com gradiente cianoi e azul marinho"
-            width="180px"
-          />
-        </figure>
-
         <!-- Ilustração landing page -->
         <figure>
           <img
             src="./assets/media/image/landingpage-illustration.svg"
             alt="Ilustração Open Doodles por Pablo Stanley"
+            width="500px"
           />
         </figure>
 
@@ -95,6 +93,7 @@
           <img
             src="./assets/media/icons/landingpage/arrowdown-circle-hover.svg"
             alt="Hover do ícone para scroll"
+            width="73px"
           />
         </figure>
       </section>
