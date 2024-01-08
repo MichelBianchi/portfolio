@@ -255,6 +255,8 @@ body {
   /* Faz com que somente o h3 "Projetos" seja referenciado a o topo do section*/
   .projects > h3:first-of-type {
     position: absolute;
+    display: flex;
+    justify-content: space-around;
     top: 40px;
     background-image: var(--gradient-color);
     background-repeat: no-repeat;
@@ -263,9 +265,16 @@ body {
   }
 
   .cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     margin-top: 100px;
     background-color: #32f6f4;
     height: 60%;
+  }
+
+  .cards h2 {
+    padding-top: 30px;
   }
   /* Display on/off do site em manutenção */
   .maintence {
