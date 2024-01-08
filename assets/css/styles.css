@@ -41,7 +41,7 @@ body {
   flex-direction: column;
   width: 100%;
   height: 100%;
-  font-size: 16px;
+  font-size: 1em;
   background-color: var(--background-color);
 }
 
@@ -207,41 +207,76 @@ body {
   .hero > figure:nth-of-type(3) {
     position: absolute;
     top: 0;
-    margin-top: 98vh;
+    margin-top: 94vh;
   }
 
   /* Modificações no .context */
   .context {
-    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     height: 100vh;
     border: 1px var(--main-color) solid;
   }
 
   .context-div {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
     justify-content: space-around;
-    width: 40%;
-    margin-left: 80px;
+    flex-direction: column;
+    align-content: space-between;
+    width: 33%;
+    height: 50%;
     margin-top: 25vh;
   }
 
+  .context-div h2,
+  p {
+    padding-top: 20px;
+  }
+
+  .context-div h4 {
+    color: var(--main-color);
+  }
+
   .context-div figure img {
-    position: absolute;
     top: 0%;
   }
 
-  /* Display on/off do site em manutenção */
-  /* .maintence {
-    display: none;
-  } */
+  /* Modificações no .projects */
+  .projects {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    border: 1px var(--main-color) solid;
+    padding-left: 120px;
+  }
 
-  .menu,
+  /* Faz com que somente o h3 "Projetos" seja referenciado a o topo do section*/
+  .projects > h3:first-of-type {
+    position: absolute;
+    top: 40px;
+    background-image: var(--gradient-color);
+    background-repeat: no-repeat;
+    background-size: 100% 3px;
+    background-position: left bottom;
+  }
+
+  .cards {
+    margin-top: 100px;
+    background-color: #32f6f4;
+    height: 60%;
+  }
+  /* Display on/off do site em manutenção */
+  .maintence {
+    display: none;
+  }
+
+  /* .menu,
   main,
   footer {
     display: none;
-  }
+  } */
 
   .maintence {
     width: 100%;
@@ -253,19 +288,19 @@ body {
     position: absolute;
     width: 550px;
     top: 12%;
-    right: 32%;
+    right: 34%;
   }
 
   .maintence h1 {
     position: absolute;
     top: 68%;
-    right: 22%;
+    right: 27%;
   }
 
   .maintence p {
     position: absolute;
     font-size: 2.2em;
     top: 80%;
-    right: 38%;
+    right: 40%;
   }
 }
