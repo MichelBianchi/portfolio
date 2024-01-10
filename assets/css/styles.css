@@ -297,6 +297,52 @@ body {
     margin-top: 20px;
   }
 
+  /* ------------------ MODIFICAÇÕES NO .ABOUT---------------- */
+  .about {
+    position: relative;
+    height: 150vh;
+    border: 1px var(--main-color) solid;
+  }
+
+  .about h3 {
+    position: absolute;
+    left: 100px;
+    top: 60px;
+  }
+
+  .about h1 {
+    position: absolute;
+    left: 100px;
+    top: 120px;
+  }
+
+  .about figure {
+    position: absolute;
+    left: 100px;
+    top: 200px;
+  }
+
+  .asideAbout {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main-color);
+    width: 50%;
+    top: 350px;
+    right: 40px;
+  }
+
+  .asideAbout article {
+    display: flex;
+    justify-content: space-between;
+    background-color: #11508b;
+    margin-top: 30px;
+  }
+
+  .aside article img {
+    margin-left: 0px;
+  }
+
   /* Display on/off do site em manutenção */
   /* .maintence {
     display: none;
