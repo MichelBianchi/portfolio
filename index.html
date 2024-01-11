@@ -222,29 +222,31 @@
         </div>
 
         <div class="bottomAbout">
-          <p>Como me achar:</p>
-
           <ul>
             <li>
-              <figure>
+              <span>Como me achar:</span>
+            </li>
+            <li>
+              <a href="#">
                 <img
                   src="./assets/media/icons/about/instagram.svg"
                   alt="Icone do Instagram"
-                  width="24px"
+                  width="18px"
                 />
-              </figure>
-              <p>Instagram</p>
+                <span>Instagram</span>
+                <!-- não sei porque, mas quando coloco isto num <p> ele não alinha no flex que coloquei no <a> -->
+              </a>
             </li>
 
             <li>
-              <figure>
+              <a href="#">
                 <img
                   src="./assets/media/icons/about/fbaup.svg"
                   alt="Icone da Faculdade de Belas Artes da Universidade do Porto"
-                  width="24px"
+                  width="18px"
                 />
-              </figure>
-              <p>FBAUP</p>
+                <span>FBAUP</span>
+              </a>
             </li>
           </ul>
 
@@ -255,10 +257,14 @@
           </p>
 
           <!-- Botão para subir ao inicio da página -->
-          <img
-            src="./assets/media/icons/about/pageup.svg"
-            alt="Botão para topo"
-          />
+          <a href="#">
+            <button></button>
+            <img
+              src="./assets/media/icons/about/pageup.svg"
+              alt="Botão para topo"
+              width="35px"
+            />
+          </a>
         </div>
       </section>
     </main>

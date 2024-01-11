@@ -301,7 +301,6 @@ body {
   .about {
     position: relative;
     height: 100vh;
-    border: 1px var(--main-color) solid;
   }
 
   /* Lado esquerdo da página */
@@ -331,7 +330,8 @@ body {
     justify-content: center;
     width: 40%;
     top: 350px;
-    right: 130px;
+    right: 8%;
+    top: 240px;
   }
 
   .rightAbout ul li {
@@ -359,27 +359,89 @@ body {
     font-weight: 700;
   }
 
+  /* Parte de baixo do .about */
   .bottomAbout {
+    position: relative;
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5rem;
+    width: 81.5%;
+    margin-left: 10%;
+    margin-top: 40px;
+    border-top: 1.5px solid var(--lighter-color);
+    border-bottom: 1.5px solid var(--lighter-color);
   }
 
-  .bottomAbout ul li {
+  .bottomAbout ul {
+    display: block;
+    width: 30%;
+    margin-left: 10px;
+    padding-top: 20px;
+  }
+
+  /* Edição dos links para o Instragram e FBAUP */
+  .bottomAbout ul li a {
     display: flex;
     align-items: center;
-    align-content: center;
-    gap: 0.75rem;
+    gap: 0.5em;
+    text-decoration: none;
+    margin: 1.3em 0 1.3em 0px;
   }
 
-  /* Display on/off do site em manutenção */
-  /* .maintence {
-    display: none;
-  } */
+  .bottomAbout ul li a {
+    font-family: "Inter Tight";
+    font-size: 1em;
+    color: var(--text-color);
+    transition: 0.3s;
+  }
 
-  .menu,
+  .bottomAbout ul li a:hover {
+    color: var(--main-color);
+  }
+
+  .bottomAbout ul > li:first-of-type span {
+    font-family: "Inter Tight";
+    font-size: 1.1em;
+    font-weight: 700;
+    color: var(--text-color);
+  }
+
+  .bottomAbout p:last-of-type {
+    text-align: center;
+    width: 30%;
+    margin-bottom: 20px;
+  }
+
+  .bottomAbout p span {
+    background-image: var(--gradient-color);
+    background-repeat: no-repeat;
+    background-size: 100% 2px;
+    background-position: left bottom;
+  }
+
+  footer {
+    display: block;
+    position: relative;
+    height: 8vh;
+    text-align: center;
+    top: 15px;
+  }
+
+  /* https://icons.getbootstrap.com/icons/arrow-up/ */
+  /* https://www.google.com/search?q=como+mudar+a+cor+de+um+icone+bootstrap+css&oq=como+mudar+a+cor+de+um+icone+bootstrap+&gs_lcrp=EgZjaHJvbWUqBwgDECEYoAEyCQgAEEUYORifBTIHCAEQIRigATIHCAIQIRigATIHCAMQIRigATIHCAQQIRigAdIBCTE0NDQyajBqN6gCALACAA&sourceid=chrome&ie=UTF-8 */
+
+  /* Display on/off do site em manutenção */
+  .maintence {
+    display: none;
+  }
+
+  /* .menu,
   main,
   footer {
     display: none;
-  }
+  } */
 
   .maintence {
     width: 100%;
