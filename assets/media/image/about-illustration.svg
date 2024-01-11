@@ -1,11 +1,11 @@
 <svg width="485" height="479" viewBox="0 0 485 479" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<path d="M0 121C0 87.8629 26.8629 61 60 61H424C457.137 61 484 87.8629 484 121V479H0V121Z" fill="url(#paint0_linear_193_4)"/>
-<rect width="484.216" height="478.998" fill="url(#pattern0)"/>
+<path d="M0.216797 121C0.216797 87.8629 27.0797 61 60.2168 61H424.217C457.354 61 484.217 87.8629 484.217 121V479H0.216797V121Z" fill="url(#paint0_linear_193_4)"/>
+<rect width="484.216" height="478.998" transform="matrix(-1 0 0 1 484.217 0)" fill="url(#pattern0)"/>
 <defs>
 <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
 <use xlink:href="#image0_193_4" transform="matrix(0.000511063 0 0 0.000516796 -0.217843 -0.469768)"/>
 </pattern>
-<linearGradient id="paint0_linear_193_4" x1="-7.82338e-07" y1="270" x2="492.66" y2="267.984" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint0_linear_193_4" x1="0.216796" y1="270" x2="492.877" y2="267.984" gradientUnits="userSpaceOnUse">
 <stop stop-color="#32F6F4"/>
 <stop offset="1" stop-color="#11508B"/>
 </linearGradient>
