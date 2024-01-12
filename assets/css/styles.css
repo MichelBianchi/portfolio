@@ -132,7 +132,7 @@ body {
   /* Tentei usar flexbox no nav, para facilitar o posicionamento automatico do conteudo */
   .menu ul {
     display: flex;
-    padding: 20px 0 20px 60px;
+    padding: 40px 0 0px 60px;
     justify-content: flex-end; /* deixei todos colados à direita */
     align-items: center; /* aqui é para centralizar todos na horizontal */
   }
@@ -155,14 +155,29 @@ body {
   .menu ul li:first-child {
     margin-right: auto;
     margin-left: 2rem; /* faz com que somente o h3 fique para a esquerda */
-    background-color: #32f6f4;
-    background-image: var(--gradient-color);
-    background-size: 100%;
-    /* Suporte para outros navegadores */
+
+    /* Animação de cor baseado no código: https://codepen.io/alvarotrigo/pen/PoKMyNO (faz parte do artigo sobre animações em css https://alvarotrigo.com/blog/css-text-animations/) */
+    background-image: linear-gradient(
+      45deg,
+      var(--main-color) 0%,
+      var(--secondary-color) 29%,
+      var(--lighter-color) 67%,
+      var(--main-color) 100%
+    );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
     -webkit-background-clip: text;
-    -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+  }
+
+  @keyframes textclip {
+    to {
+      background-position: 200% center;
+    }
   }
 
   /* Tentei first child mas não funcionou. Então procurei no MDN alguns atributos e este funcionou para esconder a visualização no modo desktop */
@@ -175,20 +190,20 @@ body {
   .hero {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     height: 100vh;
   }
 
   .hero h1 {
     width: 40%;
-    margin-left: 0;
+    margin-left: 6%;
   }
 
   .hero > figure:nth-of-type(2) {
-    margin-left: 250px;
+    margin-right: 10%;
   }
 
-  /* Tinha criado um elementro grafico no Figma para fazer este efeito de sublinhado, mas como gostava de colocar um efeito de gradient animado como fiz no meu exercício 4, e para isto ocorrer, teria que fazer com código. Então usei o mesmo tutorial do exercício 4 mas agora sem o hover */
+  /* Tinha criado um elementro grafico no Figma para fazer este efeito de sublinhado, mas como gostava de colocar um efeito sublinhado com gradient como fiz no meu exercício 4, e para isto ocorrer, teria que fazer com código. Então usei o mesmo tutorial do exercício 4 mas agora sem o hover */
   /* Fonte: https://www.youtube.com/watch?v=zl0Z8CYQoIc&ab_channel=MarioSouto-DevSoutinho */
   .textgradient {
     border-radius: 10px;
@@ -196,28 +211,11 @@ body {
     background-repeat: no-repeat;
     background-size: 100% 4px;
     background-position: left bottom;
-    transition: background-size 500ms ease;
-  }
-
-  /* Colorir somente o ponto final do H1 */
-  .colourdot {
-    color: var(--main-color);
   }
 
   /* Usei o nth-of-type para selecionar um figure específico dentro da meu section .hero */
   /* Fonte: https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-of-type */
   /* Posicionamento da ilustração */
-  .hero a svg {
-    position: absolute;
-    top: 0;
-    right: 50%;
-    margin-top: 94vh;
-    fill: var(--secondary-color);
-  }
-
-  .hero a svg:hover {
-    opacity: 0.5;
-  }
 
   /* Modificações no .context */
   .context {
@@ -233,7 +231,7 @@ body {
     align-content: space-between;
     width: 33%;
     height: 50%;
-    margin-top: 25vh;
+    margin-top: 10vh;
   }
 
   .context-div h2,
@@ -249,17 +247,13 @@ body {
     line-height: 1.3em;
   }
 
-  .context-div figure img {
-    top: 0%;
-  }
-
   /* ---------------MODIFICAÇÕES NO .PROJECTS --------------------*/
   .projects {
     position: relative;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 100vh;
+    height: 130vh;
     padding-left: 40px;
     padding-right: 40px;
   }
@@ -293,9 +287,9 @@ body {
 
   .cards a {
     width: 100%;
-    height: 70%;
+    height: 60%;
     border-radius: 30px;
-    padding-top: 45%;
+    padding-top: 50%;
     text-align: center;
     text-decoration: none;
     background-color: var(--main-color);
@@ -312,7 +306,7 @@ body {
 
   /* Margem do h3 em relação ao card */
   .cards h3 {
-    margin-top: 20px;
+    padding-top: 20px;
   }
 
   .cards p {
@@ -331,7 +325,6 @@ body {
     flex-direction: column;
     align-items: flex-start;
     margin-left: 10%;
-    margin-top: 12vh;
   }
 
   .leftAbout h3 {
@@ -466,7 +459,7 @@ body {
     position: relative;
     height: 8vh;
     text-align: center;
-    top: 15px;
+    top: 14.2%;
     transition: 0.8s all;
   }
 
