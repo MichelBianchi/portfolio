@@ -29,9 +29,9 @@
 }
 
 @font-face {
-  font-family: "Inter", "Roboto", Arial, Helvetica, sans-serif;
-  src: local(Inter)
-    url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+  font-family: "Inter Tight", "Roboto", Arial, Helvetica, sans-serif;
+  src: local(Inter Tight)
+    url("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700&display=swap");
 }
 
 html,
@@ -73,7 +73,7 @@ body {
     position: absolute;
     color: var(--text-color);
     font-size: 1em;
-    font-family: "Inter";
+    font-family: "Inter Tight";
     top: 67%;
     right: 25%;
   }
@@ -113,7 +113,7 @@ body {
     color: var(--text-color);
   }
   p {
-    font-family: "Inter";
+    font-family: "Inter Tight";
     font-size: 1em;
     color: var(--text-color);
   }
@@ -171,17 +171,22 @@ body {
     display: none;
   }
 
-  /* -------------- MODIFICAÇÕES NO .HERO -------------  */
+  /* Edição da secção hero  */
   .hero {
     display: flex;
     align-items: center;
     justify-content: space-around;
     height: 100vh;
+    border: 1px var(--main-color) solid;
   }
 
   .hero h1 {
     width: 40%;
     margin-left: 0;
+  }
+
+  .hero > figure:nth-of-type(2) {
+    margin-left: 70px;
   }
 
   /* Tinha criado um elementro grafico no Figma para fazer este efeito de sublinhado, mas como gostava de colocar um efeito de gradient animado como fiz no meu exercício 4, e para isto ocorrer, teria que fazer com código. Então usei o mesmo tutorial do exercício 4 mas agora sem o hover */
@@ -202,19 +207,21 @@ body {
 
   /* Usei o nth-of-type para selecionar um figure específico dentro da meu section .hero */
   /* Fonte: https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-of-type */
-
-  /* como fazer o hover do icone https://www.youtube.com/watch?v=lNcxHhJfqr4&ab_channel=ThePurpleFoxDesign */
   /* Posicionamento da ilustração */
   .hero > figure:nth-of-type(3) svg {
     position: absolute;
     top: 0;
-    margin-top: 98vh;
     right: 50%;
-    fill: var(--main-color);
+    margin-top: 94vh;
+    fill: var(--secondary-color);
   }
 
-  .hero > figure:nth-of-type(2) {
-    margin-bottom: 50px;
+  .hero > figure:nth-of-type(3) svg:nth-of-type(2) {
+    display: none;
+  }
+
+  .hero > figure:nth-of-type(3) svg:nth-of-type(1):hover {
+    display: none;
   }
 
   /* Modificações no .context */
@@ -223,17 +230,21 @@ body {
     justify-content: space-around;
     align-items: center;
     height: 100vh;
+    border: 1px var(--main-color) solid;
   }
 
   .context-div {
-    width: 38%;
+    justify-content: space-around;
+    flex-direction: column;
+    align-content: space-between;
+    width: 33%;
     height: 50%;
+    margin-top: 25vh;
   }
 
   .context-div h2,
-  .context-div p:not(.context-div h3) {
-    padding-top: 10px;
-    line-height: 1.5em;
+  p {
+    padding-top: 20px;
   }
 
   .context-div h4 {
@@ -251,6 +262,7 @@ body {
     justify-content: space-around;
     align-items: center;
     height: 100vh;
+    border: 1px var(--main-color) solid;
     padding-left: 40px;
     padding-right: 40px;
   }
@@ -260,7 +272,7 @@ body {
     position: absolute;
     display: flex;
     justify-content: space-around;
-    top: 20px;
+    top: 40px;
     left: 45%;
     background-image: var(--gradient-color);
     background-repeat: no-repeat;
@@ -272,8 +284,8 @@ body {
     display: flex;
     flex-direction: column;
     margin-top: 80px; /* margin em relação ao topo */
-    margin-left: 2%; /* Espaçamento entre os cards*/
-    height: 75%;
+    margin-left: 40px; /* Espaçamento entre os cards*/
+    height: 70%;
     width: 40%;
   }
 
@@ -287,26 +299,22 @@ body {
     height: 70%;
     border-radius: 30px;
     padding-top: 45%;
-    text-align: center;
-    background-color: var(--main-color);
-    background-image: var(--gradient-color);
+    padding-left: 20%;
+    background-color: var(
+      --main-color
+    ); /* aqui é para estar a var (--gradient-color) mas fica tudo preto por algum motivo */
     color: var(--background-color);
   }
 
   /* Margem do h3 em relação ao card */
   .cards h3 {
-    padding-top: 15px;
-    padding-bottom: 10px;
-  }
-
-  .cards p {
-    line-height: 1.4em;
+    margin-top: 20px;
   }
 
   /* ------------------ MODIFICAÇÕES NO .ABOUT---------------- */
   .about {
     position: relative;
-    height: 118vh;
+    height: 100vh;
   }
 
   /* Lado esquerdo da página */
@@ -382,7 +390,7 @@ body {
 
   .bottomAbout ul {
     display: block;
-    width: 50%;
+    width: 30%;
     margin-left: 10px;
     padding-top: 20px;
   }
@@ -397,51 +405,42 @@ body {
   }
 
   .bottomAbout ul li a {
-    font-family: "Inter";
+    font-family: "Inter Tight";
     font-size: 1em;
     color: var(--text-color);
     transition: 0.3s;
   }
 
   .bottomAbout ul li a:hover {
-    color: var(--secondary-color);
+    color: var(--main-color);
   }
 
   .bottomAbout ul > li:first-of-type span {
-    font-family: "Inter";
+    font-family: "Inter Tight";
     font-size: 1.1em;
-    font-weight: 00;
+    font-weight: 700;
     color: var(--text-color);
   }
 
-  .bottomAbout ul li svg {
-    fill: var(--secondary-color);
-  }
-
-  /* Alinhamento do texto central */
   .bottomAbout p:last-of-type {
     text-align: center;
     width: 30%;
+    margin-bottom: 20px;
   }
 
   .bottomAbout p span {
-    font-weight: 600;
     background-image: var(--gradient-color);
     background-repeat: no-repeat;
-    background-size: 0% 2px;
-    background-position: left bottom;
-    transition: background-size 500ms ease;
-  }
-
-  .bottomAbout p span:hover {
     background-size: 100% 2px;
+    background-position: left bottom;
   }
 
   footer {
-    position: relative;
     display: block;
-    height: 7vh;
+    position: relative;
+    height: 8vh;
     text-align: center;
+    top: 15px;
   }
 
   /* https://icons.getbootstrap.com/icons/arrow-up/ */
