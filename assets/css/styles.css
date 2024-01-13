@@ -46,52 +46,36 @@ body {
 }
 
 /* Versão telemóvel */
-@media screen and (min-width: 320px) and (max-width: 430px) {
-  .maintence {
-    width: 100%;
-    height: 100%;
-    position: relative;
-  }
-
-  .maintence img {
-    position: absolute;
-    width: 80%;
-    top: 21%;
-    right: 6%;
-  }
-
-  .maintence h1 {
-    position: absolute;
-    color: var(--text-color);
-    font-size: 1.4em;
+@media screen and (max-width: 836px) {
+  h1 {
     font-family: "Bricolage Grotesque";
-    top: 60%;
-    right: 10%;
-  }
-
-  .maintence p {
-    position: absolute;
+    font-size: 2.25em;
     color: var(--text-color);
-    font-size: 1em;
-    font-family: "Inter";
-    top: 67%;
-    right: 25%;
   }
-
-  /* Maintence on/off */
-
-  /* .maintence {
-    display: none;
-  } */
-
-  .menu,
-  main,
-  footer {
-    display: none;
+  h2 {
+    font-family: "Bricolage Grotesque";
+    font-size: 1.75em;
+    color: var(--text-color);
+  }
+  h3 {
+    font-family: "Bricolage Grotesque";
+    font-size: 1rem;
+    color: var(--text-color);
+  }
+  h4 {
+    font-family: "Bricolage Grotesque";
+    font-size: 1.75rem;
+    color: var(--text-color);
+  }
+  p {
+    font-family: "Inter";
+    font-size: 0.875em;
+    color: var(--text-color);
+    line-height: 1.3em;
   }
 }
 
-@media screen and (min-width: 1020px) {
+@media screen and (min-width: 837px) {
   h1 {
     font-family: "Bricolage Grotesque";
     font-size: 4em;
@@ -287,11 +271,12 @@ body {
   }
 
   .cards a {
+    display: flex;
     width: 100%;
     height: 60%;
     border-radius: 30px;
-    padding-top: 50%;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
     background-color: var(--main-color);
     background-image: var(--gradient-color);
@@ -326,6 +311,7 @@ body {
     flex-direction: column;
     align-items: flex-start;
     margin-left: 10%;
+    width: 29%;
   }
 
   .leftAbout h3 {
@@ -460,7 +446,7 @@ body {
     position: relative;
     height: 8vh;
     text-align: center;
-    top: 14.2%;
+    top: 1%;
     transition: 0.8s all;
   }
 
@@ -471,41 +457,4 @@ body {
 
   /* https://icons.getbootstrap.com/icons/arrow-up/ */
   /* https://www.google.com/search?q=como+mudar+a+cor+de+um+icone+bootstrap+css&oq=como+mudar+a+cor+de+um+icone+bootstrap+&gs_lcrp=EgZjaHJvbWUqBwgDECEYoAEyCQgAEEUYORifBTIHCAEQIRigATIHCAIQIRigATIHCAMQIRigATIHCAQQIRigAdIBCTE0NDQyajBqN6gCALACAA&sourceid=chrome&ie=UTF-8 */
-
-  /* Display on/off do site em manutenção */
-  .maintence {
-    display: none;
-  }
-
-  /* .menu,
-  main,
-  footer {
-    display: none;
-  } */
-
-  .maintence {
-    width: 100%;
-    height: 100%;
-    position: relative;
-  }
-
-  .maintence img {
-    position: absolute;
-    width: 550px;
-    top: 12%;
-    right: 34%;
-  }
-
-  .maintence h1 {
-    position: absolute;
-    top: 68%;
-    right: 27%;
-  }
-
-  .maintence p {
-    position: absolute;
-    font-size: 2.2em;
-    top: 80%;
-    right: 40%;
-  }
 }
