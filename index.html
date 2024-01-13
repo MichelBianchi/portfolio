@@ -2,7 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="icon" type="icon" href="./assets/media/icons/favicon-chel.svg" />
     <!-- Tentar fazer o pré carregamento da fonte, para conseguir ser lida pelo navegador mais rapido -->
     <!-- Referencia: https://css-tricks.com/how-to-load-fonts-in-a-way-that-fights-fout-and-makes-lighthouse-happy/ -->
@@ -29,31 +37,29 @@
     <meta name="data.created" content="2024-01-04" />
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
-    <title>Michel Bianchi's Webspace</title>
+    <link rel="stylesheet" href="./assets/css/navbar.css" />
+    <title>Site 2</title>
   </head>
 
   <body>
-    <header class="menu">
+    <header>
       <nav>
-        <ul>
-          <li><h2>chelbianchi</h2></li>
-          <li>
-            <a href="#context"><h3>contexto</h3></a>
+        <ul class="nav-bar">
+          <li class="logo">
+            <h3>chelbianchi</h3>
           </li>
-          <li>
-            <a href="#projects"><h3>projetos</h3></a>
-          </li>
-          <li>
-            <a href="#about"><h3>sobre</h3></a>
-          </li>
-          <li>
-            <figure>
-              <img
-                src="./assets/media/icons/landingpage/menu-hb.svg"
-                alt="menu-hb"
-              />
-            </figure>
-          </li>
+          <input type="checkbox" id="check" />
+          <span class="menu">
+            <li><a href="#context">Contexto</a></li>
+            <li><a href="#projects">Projetos</a></li>
+            <li><a href="#about">Sobre</a></li>
+            <label for="check" class="close-menu"
+              ><i class="fas fa-times"></i
+            ></label>
+          </span>
+          <label for="check" class="open-menu"
+            ><i class="fas fa-bars"></i
+          ></label>
         </ul>
       </nav>
     </header>
@@ -67,7 +73,6 @@
             >webspace<span class="colourdot">.</span></span
           >
         </h1>
-        <!-- Este h1 ficou de fora pois vou estilizar o ponto final -->
 
         <!-- Só aparece na versão mobile -->
         <figure>
@@ -95,7 +100,7 @@
       <!-- Contextualização do exercício 5 -->
       <section class="context" id="context">
         <div class="context-div">
-          <h4>CONTEXTO</h4>
+          <h3>CONTEXTO</h3>
           <h2>Percursos e objetivos</h2>
           <p>
             Tendo uma formação anterior em Java, estou expandindo meus
@@ -118,17 +123,23 @@
       <section class="projects" id="projects">
         <h3>PROJETOS</h3>
         <!-- Aqui começam os cards para cada projeto -- />
-
+  
         <!-- Exercício 1 -->
         <article class="cards">
           <a href="./assets/exercicios/ex01/index.html" target="_blank"
             ><h2>Projeto 1</h2></a
           >
-          <h3>Hello Dolly</h3>
-          <p>
-            Neste projeto nós aprendemos como funcionam diversos tipos de tags e
-            como estruturá-las em um documento HTML.
-          </p>
+          <a href="./assets/exercicios/ex01/index.html" target="_blank"
+            ><h2>#01</h2></a
+          >
+          <div class="cards-text">
+            <h3>Hello Dolly</h3>
+            <p>
+              Neste projeto nós aprendemos como funcionam diversos tipos de tags
+              e como estruturá-las em um documento HTML.
+            </p>
+            <a href=""><p>Confira aqui</p></a>
+          </div>
         </article>
 
         <!-- Exercicio 2 -->
@@ -136,11 +147,18 @@
           <a href="./assets/exercicios/ex02/index.html" target="_blank"
             ><h2>Projeto 2</h2></a
           >
-          <h3>HTML Media</h3>
-          <p>
-            Utilizando a fanpage criada no exercício anterior, nós aprendemos
-            aqui a implementar elementos como imagens, gráficos e hiperligações.
-          </p>
+          <a href="./assets/exercicios/ex02/index.html" target="_blank"
+            ><h2>#02</h2></a
+          >
+          <div class="cards-text">
+            <h3>HTML Media</h3>
+            <p>
+              Utilizando a fanpage criada no exercício anterior, nós aprendemos
+              aqui a implementar elementos como imagens, gráficos e
+              hiperligações.
+            </p>
+            <a href=""><p>Confira aqui</p></a>
+          </div>
         </article>
 
         <!-- Exercício 3 -->
@@ -148,12 +166,18 @@
           <a href="./assets/exercicios/ex03/index.html" target="_blank"
             ><h2>Projeto 3</h2></a
           >
-          <h3>CSS</h3>
-          <p>
-            A partir do HTML já criado, temos a proposta de aprender como
-            funcionam os seletores e propriedades em CSS e começamos a estilizar
-            nossa página.
-          </p>
+          <a href="./assets/exercicios/ex03/index.html" target="_blank"
+            ><h2>#03</h2></a
+          >
+          <div class="cards-text">
+            <h3>CSS</h3>
+            <p>
+              A partir do HTML já criado, temos a proposta de aprender como
+              funcionam os seletores e propriedades em CSS e começamos a
+              estilizar nossa página.
+            </p>
+            <a href=""><p>Confira aqui</p></a>
+          </div>
         </article>
 
         <!-- Exercício 4 -->
@@ -161,11 +185,17 @@
           <a href="./assets/exercicios/ex04/index.html" target="_blank"
             ><h2>Projeto 4</h2></a
           >
-          <h3>CSS Box Model</h3>
-          <p>
-            Aprofundamento dos conhecimentos em CSS utilizando o conceito de Box
-            Model e suas propriedades.
-          </p>
+          <a href="./assets/exercicios/ex04/index.html" target="_blank"
+            ><h2>#04</h2></a
+          >
+          <div class="cards-text">
+            <h3>CSS Box Model</h3>
+            <p>
+              Aprofundamento dos conhecimentos em CSS utilizando o conceito de
+              Box Model e suas propriedades.
+            </p>
+            <a href=""><p>Confira aqui</p></a>
+          </div>
         </article>
       </section>
 

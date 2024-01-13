@@ -3,12 +3,6 @@
 /* Data de criação: 04/01/2024 */
 /* Data da última modificação:  */
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 /* Variáveis */
 :root {
   --background-color: #010412;
@@ -36,9 +30,6 @@
 
 html,
 body {
-  position: flex;
-  justify-content: center;
-  flex-direction: column;
   width: 100%;
   height: 100%;
   font-size: 1em;
@@ -78,64 +69,208 @@ body {
     width: 100vw;
   }
 
-  /* https://webdesign.tutsplus.com/how-to-build-a-responsive-navigation-bar-with-flexbox--cms-33535t */
-  .menu {
-    background-color: #11508b;
-    display: flex;
-    flex-direction: row;
-    justify-content: ;
+  /* ------------------ modificações no .hero---------------- */
+
+  .hero {
+    border: #32f6f4 3px solid;
     position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
     width: 100%;
   }
 
-  /* Menu hamburguer só aparece na versão de telemovel */
-  .menu figure {
-    display: block;
+  /* esta ilustração só aparece na versão desktop */
+  .hero figure:nth-of-type(2) {
+    display: none;
   }
 
-  /* Tentei usar flexbox no nav, para facilitar o posicionamento automatico do conteudo */
-  .menu ul {
+  /* Barra decorativa da esquerda */
+  .hero figure:nth-of-type(1) img:first-child {
+    position: absolute;
+    top: 20vh;
+    left: 0;
+    width: 25%;
+  }
+
+  /* barra decorativa da direita */
+  .hero figure:nth-of-type(1) img:last-child {
+    position: absolute;
+    top: 70vh;
+    right: 0;
+    width: 25%;
+  }
+
+  /* Título */
+  .hero h1 {
+    width: 70%;
+    text-align: center;
+  }
+
+  /* Sublinhado do título */
+  .textgradient {
+    border-radius: 10px;
+    background-image: var(--gradient-color);
+    background-repeat: no-repeat;
+    background-size: 100% 4px;
+    background-position: left bottom;
+  }
+
+  /* --------------- MODIFICAÇÕES NO .CONTEXT ----------------*/
+  .context {
+    border: #32f6f4 3px solid;
+    position: relative;
     display: flex;
-    padding: 40px 0 0px 0px;
-    justify-content: flex-end; /* deixei todos colados à direita */
-    align-items: center; /* aqui é para centralizar todos na horizontal */
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100vh;
+    width: 100%;
+    padding-left: 24px;
+    padding-right: 24px;
   }
 
-  /* espaçamento entre os itens da direita */
-  .menu ul li {
-    margin-right: 5rem;
+  /* contentor do texto */
+  .context-div {
+    width: 100%;
+    margin-top: 20%;
+    line-height: 1em;
   }
 
-  .menu ul li a {
+  /* alterei somente a cor do h3 */
+  .context-div h3 {
+    color: var(--main-color);
+  }
+
+  /* Espaço entre o h3 e o h2 */
+  .context-div h3,
+  h2 {
+    line-height: 1em;
+    padding-bottom: 15px;
+  }
+
+  /* Manupulação da ilustração */
+  .context figure img {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-width: 50%;
+    max-width: 85%;
+    margin-top: 10vh;
+  }
+
+  /* ------------------- MODIFICAÇÕES NO .PROJECTS------------- */
+  .projects {
+    border: #32f6f4 3px solid;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 180vh;
+    width: 100%;
+  }
+
+  /* Titulo da section */
+  .projects > h3:nth-of-type(1) {
+    text-align: center;
+    padding: 40px 0px;
+    font-size: 1.2em;
+  }
+
+  /* Cards dos projetos */
+  .cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 40%;
+    padding-left: 24px;
+    padding-right: 30px;
+    margin-bottom: 30px;
+
+    list-style: none;
+  }
+
+  /* Somente versão desktop */
+  .cards a:nth-of-type(1) {
+    display: none;
+  }
+
+  /* Cor do número do card */
+  .cards a h2 {
+    color: var(--background-color);
+  }
+
+  /* Fundo do numero de cada card */
+  .cards a:nth-of-type(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+    background-image: var(--gradient-color);
     text-decoration: none;
+    padding-left: 20px;
+    padding-right: 30px;
+    border-radius: 10px;
+    width: 30%;
   }
 
-  .menu ul li:first-child {
-    margin-right: auto;
-    margin-left: rem; /* faz com que somente o h3 fique para a esquerda */
-
-    /* Animação de cor baseado no código: https://codepen.io/alvarotrigo/pen/PoKMyNO (faz parte do artigo sobre animações em css https://alvarotrigo.com/blog/css-text-animations/) */
-    background-image: linear-gradient(
-      45deg,
-      var(--main-color) 0%,
-      var(--secondary-color) 29%,
-      var(--lighter-color) 67%,
-      var(--main-color) 100%
-    );
-    background-size: auto auto;
-    background-clip: border-box;
-    background-size: 200% auto;
-    color: #fff;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: textclip 2s linear infinite;
+  /* Textos de cada card */
+  .cards-text {
+    line-height: 1em;
+    margin-left: 20px;
+    min-width: 40%;
+    max-width: 70%;
+    line-height: 1em;
   }
 
-  @keyframes textclip {
-    to {
-      background-position: 200% center;
-    }
+  /* Espaçamento entre o h3 e o paragrafo */
+  .cards-text h3,
+  p {
+    padding-bottom: 10px;
+    margin-right: 0px;
+  }
+
+  .cards-text h3 {
+    padding-top: 12px;
+  }
+
+  .cards .cards-text a p {
+    color: var(--main-color);
+  }
+
+  /* Botão "Confira aqui" */
+  .cards .cards-text a {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    text-decoration: none;
+    font-family: "Inter";
+    font-weight: 600;
+    font-size: 1em;
+    padding-top: 10px;
+  }
+
+  /* -------------------- MODIFICAÇÕES NO .ABOUT -------------------- */
+  .about {
+    border: #32f6f4 3px solid;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+  }
+
+  .leftAbout figure {
+    width: 100%;
+  }
+
+  .leftAbout figure img {
+    width: 30%;
   }
 }
 
@@ -152,60 +287,8 @@ body {
   }
   h3 {
     font-family: "Bricolage Grotesque";
-    font-size: 2em;
+    font-size: 1.8em;
     color: var(--text-color);
-  }
-  h4 {
-    font-family: "Bricolage Grotesque";
-    font-size: 1.5em;
-    color: var(--text-color);
-  }
-  p {
-    font-family: "Inter";
-    font-size: 1em;
-    color: var(--text-color);
-    line-height: 1.3em;
-  }
-
-  /* Estilização do header/menu */
-  .menu {
-    position: relative;
-    width: 100%;
-  }
-
-  /* Menu hamburguer só aparece na versão de telemovel */
-  .menu figure {
-    display: none;
-  }
-
-  /* Tentei usar flexbox no nav, para facilitar o posicionamento automatico do conteudo */
-  .menu ul {
-    display: flex;
-    padding: 40px 0 0px 60px;
-    justify-content: flex-end; /* deixei todos colados à direita */
-    align-items: center; /* aqui é para centralizar todos na horizontal */
-  }
-
-  /* espaçamento entre os itens da direita */
-  .menu ul li {
-    margin-right: 5rem;
-  }
-
-  .menu ul li a {
-    text-decoration: none;
-  }
-
-  .menu ul li a h3:hover {
-    text-decoration: none;
-    transition: all 0.3s ease-out; /* coloquei um efeito de transição para o hover */
-    color: var(--main-color);
-  }
-
-  .menu ul li:first-child {
-    margin-right: auto;
-    margin-left: 2rem; /* faz com que somente o h3 fique para a esquerda */
-
-    /* Animação de cor baseado no código: https://codepen.io/alvarotrigo/pen/PoKMyNO (faz parte do artigo sobre animações em css https://alvarotrigo.com/blog/css-text-animations/) */
     background-image: linear-gradient(
       45deg,
       var(--main-color) 0%,
@@ -228,14 +311,33 @@ body {
       background-position: 200% center;
     }
   }
+  h4 {
+    font-family: "Bricolage Grotesque";
+    font-size: 1.5em;
+    color: var(--text-color);
+  }
+  p {
+    font-family: "Inter";
+    font-size: 1em;
+    color: var(--text-color);
+    line-height: 1.3em;
+  }
+
+  .nav-bar .logo h3 {
+    font-size: 2.7em;
+  }
+
+  /* Estilização do header/menu */
+
+  /* Animação de cor baseado no código: https://codepen.io/alvarotrigo/pen/PoKMyNO (faz parte do artigo sobre animações em css https://alvarotrigo.com/blog/css-text-animations/) */
 
   /* Tentei first child mas não funcionou. Então procurei no MDN alguns atributos e este funcionou para esconder a visualização no modo desktop */
   /* fonte: https://developer.mozilla.org/en-US/docs/Web/CSS/:first-of-type */
+
+  /* Edição da secção hero  */
   .hero figure:first-of-type {
     display: none;
   }
-
-  /* Edição da secção hero  */
   .hero {
     display: flex;
     align-items: center;
@@ -271,7 +373,7 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 100vh;
+    height: 90vh;
   }
 
   .context-div {
@@ -280,7 +382,7 @@ body {
     align-content: space-between;
     width: 33%;
     height: 50%;
-    margin-top: 10vh;
+    margin-top: 0vh;
   }
 
   .context-div h2,
@@ -312,18 +414,21 @@ body {
     position: absolute;
     display: flex;
     justify-content: space-around;
-    top: 40px;
+    top: 30px;
     left: 45%;
-    background-image: var(--gradient-color);
-    background-repeat: no-repeat;
-    background-size: 100% 3px;
-    background-position: left bottom;
+  }
+
+  .cards > a:nth-of-type(2) {
+    display: none;
+  }
+  .cards .cards-text a {
+    display: none;
   }
 
   .cards {
     display: flex;
     flex-direction: column;
-    margin-top: 80px; /* margin em relação ao topo */
+    margin-top: 10px; /* margin em relação ao topo */
     margin-left: 40px; /* Espaçamento entre os cards*/
     height: 70%;
     width: 40%;
@@ -380,7 +485,6 @@ body {
 
   .leftAbout h3 {
     padding-bottom: 20px;
-    font-size: 1.5em;
     color: var(--main-color);
   }
 
@@ -395,9 +499,8 @@ body {
     flex-direction: column;
     justify-content: center;
     width: 40%;
-    top: 350px;
+    top: 270px;
     right: 8%;
-    top: 240px;
   }
 
   .rightAbout ul li {
@@ -444,7 +547,8 @@ body {
     display: block;
     width: 30%;
     margin-left: 10px;
-    padding-top: 20px;
+    padding-top: 40px;
+    padding-bottom: 20px;
   }
 
   /* Edição dos links para o Instragram e Becance */
@@ -482,7 +586,7 @@ body {
   .bottomAbout p:last-of-type {
     text-align: center;
     width: 30%;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
   }
 
   /* Texto do .bottomAbout */
@@ -508,9 +612,9 @@ body {
   footer {
     display: block;
     position: relative;
-    height: 8vh;
+    height: 10vh;
     text-align: center;
-    top: 1%;
+    top: 16.5%;
     transition: 0.8s all;
   }
 

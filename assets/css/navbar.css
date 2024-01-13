@@ -1,0 +1,144 @@
+/* Usei como referência o video https://www.youtube.com/watch?v=QQlxvj_GKss&ab_channel=DeltatyCode  */
+/* tive de fazer uma página de estilos só pro nav-bar pois tratei dele depois da página pronta, então estava a dar erro e por isto fiz a parte */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Variáveis */
+:root {
+  --background-color: #010412;
+  --main-color: #32f6f4;
+  --secondary-color: #7efefd;
+  --lighter-color: #31636b;
+  --gradient-color: linear-gradient(45deg, #32f6f4, #11508b);
+  --font-size: 16px;
+  --text-color: #e8e9eb;
+}
+
+/* Fontes utilizadas */
+@font-face {
+  font-family: "Bricolage Grotesque", "Trebuchet MS", Helvetica, sans-serif;
+  src: local(Bricolage Grotesque)
+    url(https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700&display=swap)
+    format("opentype");
+}
+
+@font-face {
+  font-family: "Inter", "Roboto", Arial, Helvetica, sans-serif;
+  src: local(Inter)
+    url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-size: 1em;
+  background-color: var(--background-color);
+}
+
+body {
+  font-family: "Bricolage Grotesque", sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+.nav-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  position: relative;
+  background-color: var(--color2);
+  padding: 30px 150px 30px 80px;
+}
+.logo a h3 {
+  text-decoration: none;
+  list-style: none;
+}
+.menu {
+  display: flex;
+}
+.menu li {
+  padding-left: 60px;
+}
+.menu li a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--text-color);
+  text-align: center;
+  transition: 0.15s ease-in-out;
+  position: relative;
+  text-transform: uppercase;
+  font-size: 1.5em;
+}
+.menu li a:hover {
+  color: var(--main-color);
+  transition: 0.3s ease-in-out;
+}
+.open-menu,
+.close-menu {
+  position: absolute;
+  color: var(--color1);
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: none;
+}
+.open-menu {
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+.close-menu {
+  top: 20px;
+  right: 20px;
+}
+#check {
+  display: none;
+}
+@media (max-width: 876px) {
+  .nav-bar {
+    padding: 31px 0px 35px 30px;
+  }
+  .menu {
+    padding-right: 30px;
+    color: var(--background-color);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 100;
+    background-color: #01b7b4;
+    transition: all 0.2s ease-in-out;
+  }
+  .menu li a {
+    color: #010412;
+  }
+
+  .menu li a:hover {
+    color: var(--text-color);
+  }
+
+  .logo h3 {
+    font-size: 2em;
+  }
+  .menu li {
+    margin-top: 40px;
+  }
+  .menu li a {
+    padding: 10px;
+  }
+  .open-menu,
+  .close-menu {
+    display: block;
+  }
+  #check:checked ~ .menu {
+    right: 0;
+  }
+}
