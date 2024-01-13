@@ -46,7 +46,7 @@ body {
 }
 
 /* Versão telemóvel */
-@media screen and (max-width: 836px) {
+@media screen and (max-width: 876px) {
   h1 {
     font-family: "Bricolage Grotesque";
     font-size: 2.25em;
@@ -64,7 +64,7 @@ body {
   }
   h4 {
     font-family: "Bricolage Grotesque";
-    font-size: 1.75rem;
+    font-size: 0.875em;
     color: var(--text-color);
   }
   p {
@@ -73,9 +73,73 @@ body {
     color: var(--text-color);
     line-height: 1.3em;
   }
+
+  body {
+    width: 100vw;
+  }
+
+  /* https://webdesign.tutsplus.com/how-to-build-a-responsive-navigation-bar-with-flexbox--cms-33535t */
+  .menu {
+    background-color: #11508b;
+    display: flex;
+    flex-direction: row;
+    justify-content: ;
+    position: relative;
+    width: 100%;
+  }
+
+  /* Menu hamburguer só aparece na versão de telemovel */
+  .menu figure {
+    display: block;
+  }
+
+  /* Tentei usar flexbox no nav, para facilitar o posicionamento automatico do conteudo */
+  .menu ul {
+    display: flex;
+    padding: 40px 0 0px 0px;
+    justify-content: flex-end; /* deixei todos colados à direita */
+    align-items: center; /* aqui é para centralizar todos na horizontal */
+  }
+
+  /* espaçamento entre os itens da direita */
+  .menu ul li {
+    margin-right: 5rem;
+  }
+
+  .menu ul li a {
+    text-decoration: none;
+  }
+
+  .menu ul li:first-child {
+    margin-right: auto;
+    margin-left: rem; /* faz com que somente o h3 fique para a esquerda */
+
+    /* Animação de cor baseado no código: https://codepen.io/alvarotrigo/pen/PoKMyNO (faz parte do artigo sobre animações em css https://alvarotrigo.com/blog/css-text-animations/) */
+    background-image: linear-gradient(
+      45deg,
+      var(--main-color) 0%,
+      var(--secondary-color) 29%,
+      var(--lighter-color) 67%,
+      var(--main-color) 100%
+    );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+  }
+
+  @keyframes textclip {
+    to {
+      background-position: 200% center;
+    }
+  }
 }
 
-@media screen and (min-width: 837px) {
+@media screen and (min-width: 877px) {
   h1 {
     font-family: "Bricolage Grotesque";
     font-size: 4em;
