@@ -116,6 +116,7 @@ body {
     font-family: "Inter";
     font-size: 1em;
     color: var(--text-color);
+    line-height: 1.3em;
   }
 
   /* Estilização do header/menu */
@@ -424,7 +425,7 @@ body {
   .bottomAbout ul > li:first-of-type span {
     font-family: "Inter";
     font-size: 1.1em;
-    font-weight: 800;
+    font-weight: 600;
     color: var(--text-color);
   }
 
@@ -440,7 +441,7 @@ body {
     background-repeat: no-repeat;
     background-size: 0% 2px;
     background-position: left bottom;
-    font-weight: 600;
+    font-weight: 700;
     transition: background-size 0.5s ease;
   }
 
