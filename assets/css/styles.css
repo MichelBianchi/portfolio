@@ -424,7 +424,7 @@ body {
   .bottomAbout ul > li:first-of-type span {
     font-family: "Inter";
     font-size: 1.1em;
-    font-weight: 700;
+    font-weight: 800;
     color: var(--text-color);
   }
 
