@@ -100,7 +100,7 @@ body {
 }
 @media (max-width: 876px) {
   .nav-bar {
-    padding: 31px 0px 35px 30px;
+    padding: 20px 0px 20px 30px;
   }
   .menu {
     padding-right: 30px;
@@ -108,7 +108,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 60%;
+    width: 80%;
     height: 100vh;
     position: fixed;
     top: 0;

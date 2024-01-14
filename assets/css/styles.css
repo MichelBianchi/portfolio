@@ -72,7 +72,6 @@ body {
   /* ------------------ modificações no .hero---------------- */
 
   .hero {
-    border: #32f6f4 3px solid;
     position: relative;
     display: flex;
     align-items: center;
@@ -92,7 +91,8 @@ body {
     position: absolute;
     top: 20vh;
     left: 0;
-    width: 25%;
+    width: 35%;
+    max-width: 160px;
   }
 
   /* barra decorativa da direita */
@@ -100,7 +100,8 @@ body {
     position: absolute;
     top: 70vh;
     right: 0;
-    width: 25%;
+    width: 35%;
+    max-width: 160px;
   }
 
   /* Título */
@@ -120,13 +121,12 @@ body {
 
   /* --------------- MODIFICAÇÕES NO .CONTEXT ----------------*/
   .context {
-    border: #32f6f4 3px solid;
     position: relative;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: flex-start;
-    height: 100vh;
+    height: 90vh;
     width: 100%;
     padding-left: 24px;
     padding-right: 24px;
@@ -153,17 +153,15 @@ body {
 
   /* Manupulação da ilustração */
   .context figure img {
-    display: flex;
-    justify-content: center;
     width: 100%;
     min-width: 50%;
     max-width: 85%;
     margin-top: 10vh;
+    margin-left: 20px;
   }
 
   /* ------------------- MODIFICAÇÕES NO .PROJECTS------------- */
   .projects {
-    border: #32f6f4 3px solid;
     position: relative;
     display: flex;
     justify-content: center;
@@ -255,22 +253,149 @@ body {
 
   /* -------------------- MODIFICAÇÕES NO .ABOUT -------------------- */
   .about {
-    border: #32f6f4 3px solid;
+    position: relative;
+    width: 100%;
+  }
+
+  /* Titulo do section about */
+  .titleAbout {
+    position: relative;
+    left: 4%;
+    width: 90%;
+    top: 5vh;
+  }
+
+  .titleAbout h3 {
+    color: var(--main-color);
+    padding-bottom: 10px;
+  }
+
+  /* descrição about */
+  .rightAbout {
     position: relative;
     display: flex;
-    align-items: center;
     flex-direction: column;
     justify-content: center;
-    height: 100vh;
+    width: 90%;
+    left: 4%;
+    top: 10vh;
+  }
+
+  .rightAbout ul li p {
+    font-size: 0.7em;
+    font-weight: 700;
+  }
+
+  .rightAbout li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border-bottom: 1.5px solid var(--lighter-color);
+  }
+
+  .rightAbout li:nth-of-type(3) {
+    border-bottom: #010412;
+  }
+
+  /* Imagem no about */
+  .leftAbout {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: 4%;
+    top: 13vh;
+    width: 90%;
   }
 
   .leftAbout figure {
-    width: 100%;
+    text-align: center;
+    width: 80%;
   }
 
   .leftAbout figure img {
-    width: 30%;
+    width: 80%;
+  }
+
+  /* Modificações no bottom da section about */
+  .bottomAbout {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    top: 16vh;
+    left: 4%;
+    width: 90%;
+    height: 15%;
+  }
+
+  /* Separador de cima*/
+  .bottomAbout ul li:nth-of-type(1) {
+    padding-top: 20px;
+    border-top: 1.5px solid var(--lighter-color);
+  }
+
+  /* Separador de baixo */
+  .bottomAbout ul li:nth-of-type(3) {
+    border-bottom: 1.5px solid var(--lighter-color);
+  }
+
+  /* Alinhamento dos botoes do Intagram e Behance */
+  .bottomAbout ul li a {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    text-decoration: none;
+    margin: 1.3em 0 1.3em 0px;
+  }
+
+  /* Texto dos botões */
+  .bottomAbout ul li a span {
+    text-decoration: none;
+    color: var(--text-color);
+    font-family: "Inter";
+    font-weight: 500;
+    font-size: 0.8em;
+  }
+
+  /* Efeito para quando clicar no botão */
+  .bottomAbout ul li a span:hover {
+    color: var(--main-color);
+  }
+
+  /* Cor dos icones dos botões */
+  .bottomAbout ul li a svg {
+    fill: var(--secondary-color);
+  }
+
+  /* Paragrafo about */
+  .bottomAbout p:nth-of-type(1) {
+    padding-top: 20px;
+    text-align: center;
+  }
+
+  /* Sublinhado gradiente no "fins de estudo" */
+  .bottomAbout p span {
+    background-image: var(--gradient-color);
+    background-repeat: no-repeat;
+    background-size: 100% 2px;
+    background-position: left bottom;
+  }
+
+  /* Posicionamento do botão topo */
+  .botaoTopo {
+    position: absolute;
+    right: 0;
+    top: 5.5vh;
+  }
+
+  /* Copyright */
+  .bottomAbout p:nth-of-type(2) {
+    color: #858585;
+    font-size: 0.6em;
+    padding-top: 10px;
+    text-align: center;
   }
 }
 
@@ -471,7 +596,15 @@ body {
   /* ------------------ MODIFICAÇÕES NO .ABOUT---------------- */
   .about {
     position: relative;
-    height: 100vh;
+  }
+
+  /* Sobre e Titulo */
+  .about h3,
+  h1 {
+    position: relative;
+    width: 80%;
+    left: 10%;
+    padding-bottom: 10px;
   }
 
   /* Lado esquerdo da página */
@@ -481,6 +614,7 @@ body {
     align-items: flex-start;
     margin-left: 10%;
     width: 29%;
+    margin-top: 30px;
   }
 
   .leftAbout h3 {
@@ -528,7 +662,7 @@ body {
     font-weight: 700;
   }
 
-  /* Parte de baixo do .about */
+  /* Footer */
   .bottomAbout {
     position: relative;
     display: flex;
@@ -583,7 +717,7 @@ body {
     color: var(--text-color);
   }
 
-  .bottomAbout p:last-of-type {
+  .bottomAbout p:nth-of-type(1) {
     text-align: center;
     width: 30%;
     margin-bottom: 0px;
@@ -609,20 +743,19 @@ body {
     opacity: 0.5;
   }
 
-  footer {
-    display: block;
-    position: relative;
-    height: 10vh;
+  /* Copyright */
+  .bottomAbout p:nth-of-type(2) {
+    position: absolute;
+    top: 24.8vh;
+    width: 100%;
     text-align: center;
-    top: 16.5%;
-    transition: 0.8s all;
+    padding-bottom: 15px;
   }
-
-  footer:hover {
+  /* Hover no copyright */
+  .bottomAbout p:nth-of-type(2):hover {
     background-color: var(--main-color);
     background-image: var(--gradient-color);
+    color: #010412;
+    font-weight: 500;
   }
-
-  /* https://icons.getbootstrap.com/icons/arrow-up/ */
-  /* https://www.google.com/search?q=como+mudar+a+cor+de+um+icone+bootstrap+css&oq=como+mudar+a+cor+de+um+icone+bootstrap+&gs_lcrp=EgZjaHJvbWUqBwgDECEYoAEyCQgAEEUYORifBTIHCAEQIRigATIHCAIQIRigATIHCAMQIRigATIHCAQQIRigAdIBCTE0NDQyajBqN6gCALACAA&sourceid=chrome&ie=UTF-8 */
 }
